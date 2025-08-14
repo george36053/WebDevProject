@@ -1,0 +1,101 @@
+﻿/*keep HTML for content and CSS for layout (how it looks)*/
+/*Formats everything on the webpage*/
+/*┌─────────────────────┐
+│ Inline Styles │ ← Highest priority
+└──────────▲──────────┘
+│
+┌──────────┴──────────┐
+│ IDs (#id) │
+└──────────▲──────────┘
+│
+┌──────────┴──────────┐
+│ Classes (.class) │
+│ Attributes ([type]) │
+│ Pseudo-classes (:hover) │
+└──────────▲──────────┘
+│
+┌──────────┴──────────┐
+│ Elements (p, h1) │
+│ Pseudo-elements (::before) │
+└──────────▲──────────┘
+│
+┌──────────┴──────────┐
+│ Browser Defaults │ ← Lowest priority
+└─────────────────────┘
+*/
+body {
+    background-color: #0c0909;
+    /*background-image: url("https://cdn.discordapp.com/attachments/1055378266493567050/1298044381265268898/DSC_0184.jpg?ex=689f0648&is=689db4c8&hm=6dd6960ce1e0926e5b86289606d3654012b683eca69bfd8d6920877b06d7615c&");
+    background-size: cover;*/ /* Make it fill the entire area */
+    /*background-repeat: no-repeat;*/ /* Prevent tiling */
+    /*background-position: center;*/ /*Center the image */
+    /*background-attachment: fixed;*/ /*Keep the background fixed during scrolling */
+    /*font-family: Arial, sans-serif;*/
+    color: #ff6a00;
+    padding: 20px;
+}
+#super-title { /*this overrides lines 50-55*/
+    color: purple;
+}
+/*  FORMATTING
+    selector {
+    property: value;
+             }
+*/
+/*PARAGRAPH COLOR*/
+p {
+    color: blue;
+}
+/*HEADERS COLOR AND SIZE*/
+h1 {
+    margin-top: 10px;
+    color: red;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: gold;
+    font-size: 30px;
+}
+/*LIST ITEM COLOR AND SIZE*/
+li {
+        color: purple;
+    font-size: 18px;
+}
+/*LINK COLOR AND DECORATION*/
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+#love-btn {
+    background: pink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 48px;
+    animation: floatUp 2s linear forwards;
+}
+
+@keyframes floatUp {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
